@@ -3,40 +3,59 @@
 var ordersChart = document.getElementById("myAreaChart").getContext('2d');
 var xyValues = [
     {x:'Aug 1', y:9000},
-    {x:60, y:30000},
-    {x:70, y:25000},
-    {x:80, y:20000},
-    {x:90, y:20000},
-    {x:100, y:25000},
-    {x:110, y:31000},
-    {x:120, y:35000},
-    {x:130, y:30000},
-    {x:140, y:30000},
-    {x:150, y:20000},
-    {x:140, y:37000},
-    {x:150, y:40000}
+    {x:'Aug 2', y:30000},
+    {x:'Aug 3', y:25000},
+    {x:'Aug 4', y:20000},
+    {x:'Aug 5', y:20000},
+    {x:'Aug 6', y:25000},
+    {x:'Aug 7', y:31000},
+    {x:'Aug 8', y:35000},
+    {x:'Aug 9', y:30000},
+    {x:'Aug 10', y:30000},
+    {x:'Aug 11', y:20000},
+    {x:'Aug 12', y:37000},
+    {x:'Aug 13', y:40000}
   ];
   
-const myChart = new Chart(ordersChart, {
-    type: 'line',
+  new Chart("myAreaChart", {
+    type: "line",
     data: {
-        labels: ['Aug 1', 'Aug 3', 'Aug 5', 'Aug 7', 'Aug 9', 'Aug 11','Aug 13'],
-        datasets: [{
-            label: '',
-            data: [9000,30000,25000,20000,20000,25000,31000,35000,30000,30000,20000,37000,40000],
-           backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
-            borderWidth: 1
-        }]
+      datasets: [
+      {
+        fill:true,
+        pointBackgroundColor:"#da4167",
+        backgroundColor: 'rgb(15, 15, 15 , 0.2)',
+        borderColor: "#da4167",
+        data: xyValues
+      }
+      ]
     },
     options: {
-        scales: {
-            y: {
-                beginAtZero: true
+      //to hide the chart legend
+    plugins:{
+     legend: {display:false},
+    }
+     ,
+     //to modify the line style
+     tension: 0.3,
+      scales: {
+        x: { 
+          ticks: {
+            //to specify the number of nods in the axis that i need
+              maxTicksLimit:7
+          }
+      },
+       
+        y: { 
+            min: 0,
+            max: 40000,
+            ticks: {
+                stepSize: 10000
             }
         }
     }
-});
+  }
+  });
 
 // Bar Chart for Visitor
 var visitorChart = document.getElementById("myBarChart");
@@ -98,10 +117,49 @@ new Chart("myPieChart", {
       data: yValues
     }]
   },
+  
   options: {
-   
+    //to resize the chart
+    maintainAspectRatio: false,
   }
 });
 
 // Liner Chart for Rat
 var ratChart = document.getElementById("myLinearChart");
+var xValues = ["January", "February", "March", "April", "May","June"];
+var yValues = [1,1.5,2.5,4,5,3.2];
+
+new Chart("myLinearChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [
+    {
+      fill:true,
+      pointBackgroundColor:"#da4167",
+      backgroundColor: 'rgb(201, 203, 207, 0.2)',
+      borderColor: "#da4167",
+      data: yValues
+    }
+    ]
+  },
+  options: {
+    //to hide the chart legend
+  plugins:{
+   legend: {display:false}
+  }
+   ,
+   //to modify the line style
+   tension: 0.3,
+    scales: {
+      y: { 
+          min: 0,
+          max: 5,
+         
+          ticks: {
+              stepSize: 1
+          }
+      }
+  }
+}
+});
