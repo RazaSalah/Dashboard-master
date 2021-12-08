@@ -34,6 +34,7 @@ var xyValues = [
       //to hide the chart legend
     plugins:{
      legend: {display:false},
+     
     }
      ,
      //to modify the line style
@@ -43,22 +44,18 @@ var xyValues = [
           ticks: {
             //to specify the number of nods in the axis that i need
               maxTicksLimit:7
+          }, grid:{
+            display:false
           }
       },
-       
-        y: { 
-            min: 0,
-            max: 40000,
-            ticks: {
-                stepSize: 10000
-            }
-        }
+      yAxes: {ticks: {min: 0, max:40000 , stepSize: 10000}},
+     
     }
   }
   });
 
 // Bar Chart for Visitor
-var visitorChart = document.getElementById("myBarChart");
+var visitorChart = document.getElementById("myBarChart").getContext('2d');
 var xValues = ["June", "July", "August", "September", "October","November","December"];
 var menValues = [4000,4500,13000,5000,7000,9000,12000];
 var womenValues = [6000,6000,15000,7000,9500,13000,14000];
@@ -83,20 +80,21 @@ new Chart("myBarChart", {
     options: {
       legend: {display: false},
       scales: {
-        y: {
-            type: 'linear',
-            min: 0,
-            max: 15000,
-            ticks: {
-                stepSize: 5000
-            }
+        x:{
+          grid:{
+            display:false
+          }
+        },
+        yAxes:{ticks: {min: 0, max:15000 ,  type: 'linear',
+        stepSize: 5000}
+      },
+        
         }
     }
-}
   });
 
 // Liner Chart for Cities
-var citiesChart = document.getElementById("myPieChart");
+var citiesChart = document.getElementById("myPieChart").getContext('2d');
 var xValues = ["Riyadh", "Jeddah", "Sharqia", "Mecca"];
 var yValues = [65, 30, 20, 44];
 var barColors = [
@@ -120,12 +118,12 @@ new Chart("myPieChart", {
   
   options: {
     //to resize the chart
-    maintainAspectRatio: false,
+    responsive: true,
   }
 });
 
 // Liner Chart for Rat
-var ratChart = document.getElementById("myLinearChart");
+var ratChart = document.getElementById("myLinearChart").getContext('2d');
 var xValues = ["January", "February", "March", "April", "May","June"];
 var yValues = [1,1.5,2.5,4,5,3.2];
 
@@ -147,19 +145,20 @@ new Chart("myLinearChart", {
     //to hide the chart legend
   plugins:{
    legend: {display:false}
+   
   }
    ,
    //to modify the line style
    tension: 0.3,
     scales: {
-      y: { 
-          min: 0,
-          max: 5,
-         
-          ticks: {
-              stepSize: 1
-          }
+      x:{
+        grid:{
+          display:false
+        }
+       },
+       yAxes:{ticks: {min: 0, max:5 ,stepSize: 1},
+       
       }
-  }
+    }
 }
 });
