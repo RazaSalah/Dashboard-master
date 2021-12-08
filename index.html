@@ -7,8 +7,17 @@
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <link href="css/styles.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- for the datatable -->
+   
+    <link rel="stylesheet" href="  https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         crossorigin="anonymous"></script>
+       
+
+       
+     
+
 </head>
 
 <body>
@@ -155,11 +164,12 @@
                           Visitors City
                         </div>
                         <div class="card-body">
-                          <div class="chart">
-                            <canvas id="myPieChart" width="400" height="350"></canvas>
+                          <div class="chart" style=" width:50%; height:100%; margin: 0 auto;">
+                            <canvas id="myPieChart"></canvas>
                           </div>
                         </div>
                       </div></div>
+            
                       <div class="col-md-6">
                         <div class="card">
                         <div class="card-header">
@@ -175,13 +185,25 @@
                       </div></div></div>
                     
                      <!-- Customers Table -->
-                      <div class="row">
+                      <div class="row mb-5">
                         <div class="col-12"> <div class="card">
                           <div class="card-header">
                             <i class="fas fa-users"></i>
                             Customers 
                           </div>
                           <div class="card-body">
+                             <table id="Customer" class="table table-striped" style="width:100%">
+                              <thead>
+                                  <tr>
+                                      <th>Name</th>
+                                      <th>Address</th>
+                                      <th>City</th>
+                                      <th>Age</th>
+                                      <th>Last Visit</th>
+                                      <th>Orders</th>
+                                  </tr>
+                              </thead>
+                          </table> 
               
                           </div>
                         </div></div></div>
@@ -199,9 +221,18 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+    <!-- for the chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
-   
+    <!-- for the datatable -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <!-- javascript file -->
     <script src="js/scripts.js"></script>
     <script src="js/charts.js"></script>
+    <!-- for the chat -->
+    <script src="//code.tidio.co/33kszi7d6glcpbsfrs8m3s6xpkh7oirp.js" async></script>
+
+
 </body>
 </html>
