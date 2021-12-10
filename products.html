@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/816f353cd9.js" crossorigin="anonymous"></script>
+  
+  
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple py-4 px-4 ">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center ">
+                    <a href="#" class="navbar-brand">
+                        Nrt Solution</a>
+    
+                <i class="fas fa-align-left  fs-4  ms-lg-5 me-3" id="menu-toggle"></i>
+               
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar"
+                aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation" style="border:none;">
+                <i class="fas fa-ellipsis-v text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <form class="d-flex ms-auto my-3 my-lg-0">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Search" aria-label="Search" />
+                        <button class="btn bg-pink" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-user  me-2"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-purple" id="sidebar-wrapper">
+            <div class="list-group my-3">
+                <a href="index.html" class="list-group-item  bg-transparent gray-text fw-bold active">
+                  <i class="fas fa-home"></i>Home</a>
+                <a href="products.html" class="list-group-item  bg-transparent gray-text fw-bold">
+                  <i class="fas fa-tshirt"></i>Products</a>
+                <a href="orders.html" class="list-group-item  bg-transparent gray-text fw-bold">
+                  <i class="fas fa-border-all"></i>Orders</a>
+                <a href="report.html" class="list-group-item  bg-transparent gray-text fw-bold">
+                  <i class="fas fa-chart-area"></i>Reports</a>
+                <a href="customers.html" class="list-group-item  bg-transparent  gray-text  fw-bold">
+                  <i class="fas fa-users"></i>Customers</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid px-4">
+
+              <div class="col-12 fw-bold fs-3">Dashboard</div>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Products</li>
+                </ol>
+              </nav>
+              <!-- the products cards container  -->
+              <div class="container mt-5 mb-5" id="productCard">
+               </div>
+            
+            
+
+<!-- for the container fluid -->
+            </div>
+       <!-- Customers Table -->
+       <footer class="footer mt-auto py-3 bg-light ">
+        <div class="container-fluid">
+          <span class="text-muted"> Copyright © nrt.sa 2021</span>
+        </div>
+      </footer>
+
+            
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+    
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- for the chart -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+     <!-- for the datatable -->
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+     <script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+     <script src="//cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <!-- javascript file -->
+    <script src="js/scripts.js"></script>
+     <script src="js/products.js"></script>
+    <script
+      src="//code.tidio.co/33kszi7d6glcpbsfrs8m3s6xpkh7oirp.js"
+      async
+    ></script>
+ 
+</body>
+
+</html>
