@@ -1,4 +1,4 @@
-    
+// import './products.js';
     
     // Toggle the side navigation  
     // const sidebarToggle = document.body.querySelector('#wrapper');
@@ -25,3 +25,5 @@
             ]
         } );
     } );
+
+
