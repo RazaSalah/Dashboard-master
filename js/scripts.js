@@ -1,7 +1,14 @@
     
     
     // Toggle the side navigation  
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
+    // const sidebarToggle = document.body.querySelector('#wrapper');
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+        
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+
 
     
 // i have to run the file with the live server so it will work
