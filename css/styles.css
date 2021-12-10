@@ -55,6 +55,9 @@
   font-weight: bold;
   border: none;
 }
+.product-image {
+  width: 100%
+}
 
 @media (min-width: 768px) {
   #sidebar-wrapper {
@@ -127,4 +130,7 @@
     margin-left: -15rem;
   }
 } */
+
+
+
 
