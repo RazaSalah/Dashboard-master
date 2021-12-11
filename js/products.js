@@ -57,29 +57,31 @@ const products = [
   },
 ];
 
+//the idea here is to print the array by using the map function 
+//getting the container by the id ant then creating the div for the cards 
+//the next step is to define the div content and assign the value from the array 
+//the lat step will be assigning the content to the div and then to the container
 
-products.forEach((element ,i) =>{
+const cards = products.map((productsValue) =>{
+  const productBox = document.querySelector("#productCard")
+  const card = document.createElement("div"); 
 
-const productBox = document.querySelector("#productCard")
-const card = document.createElement("div"); 
-card.classList =''
-
-const productCard = `
+  const productCard = `
  <div class="d-flex justify-content-center row mb-5">
    <div class="col-md-10">
        <div class="row p-2 bg-white border rounded"> 
            <div class="col-md-3 mt-1">
-              <img id="product-img"class="img-fluid img-responsive rounded product-image" src="${products[i].image}"> 
+              <img id="product-img"class="img-fluid img-responsive rounded product-image" src="${productsValue.image}"> 
            </div>
            <div class="col-md-6 mt-1">
-                <h5 id="product-name">${products[i].name}</h5>
-               <p class="text-justify para mb-0" id="product-desc">${products[i].description}<br><br></p>
+                <h5 id="product-name">${productsValue.name}</h5>
+               <p class="text-justify para mb-0" id="product-desc">${productsValue.description}<br><br></p>
            </div>
            <div class="align-items-center align-content-center col-md-3 mt-1">
                <div class="d-flex flex-row align-items-center">
-                    <h4 class="mr-1" id="product-price">${products[i].price}</h4> 
+                    <h4 class="mr-1" id="product-price">${productsValue.price}</h4> 
                </div>
-               <h6 class="text-success">${products[i].status}</h6>
+               <h6 class="text-success">${productsValue.status}</h6>
                <div class="d-flex flex-column mt-4">
                  <button class="btn bg-purple btn-sm" type="button">Details</button>
                  <button class="btn bg-pink btn-sm mt-2" type="button">Delete</button></div>
@@ -87,9 +89,43 @@ const productCard = `
        </div>
        </div>
        </div>`;
+
        card.innerHTML+= productCard;
        productBox.appendChild(card)
+})
 
-      })
+// products.forEach((element ,i) =>{
+
+// const productBox = document.querySelector("#productCard")
+// const card = document.createElement("div"); 
+
+
+// const productCard = `
+//  <div class="d-flex justify-content-center row mb-5">
+//    <div class="col-md-10">
+//        <div class="row p-2 bg-white border rounded"> 
+//            <div class="col-md-3 mt-1">
+//               <img id="product-img"class="img-fluid img-responsive rounded product-image" src="${products[i].image}"> 
+//            </div>
+//            <div class="col-md-6 mt-1">
+//                 <h5 id="product-name">${products[i].name}</h5>
+//                <p class="text-justify para mb-0" id="product-desc">${products[i].description}<br><br></p>
+//            </div>
+//            <div class="align-items-center align-content-center col-md-3 mt-1">
+//                <div class="d-flex flex-row align-items-center">
+//                     <h4 class="mr-1" id="product-price">${products[i].price}</h4> 
+//                </div>
+//                <h6 class="text-success">${products[i].status}</h6>
+//                <div class="d-flex flex-column mt-4">
+//                  <button class="btn bg-purple btn-sm" type="button">Details</button>
+//                  <button class="btn bg-pink btn-sm mt-2" type="button">Delete</button></div>
+//            </div>
+//        </div>
+//        </div>
+//        </div>`;
+//        card.innerHTML+= productCard;
+//        productBox.appendChild(card)
+
+//       })
 
 
