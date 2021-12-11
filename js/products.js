@@ -79,7 +79,7 @@ const cards = products.map((productsValue) =>{
            </div>
            <div class="align-items-center align-content-center col-md-3 mt-1">
                <div class="d-flex flex-row align-items-center">
-                    <h4 class="mr-1" id="product-price">${productsValue.price}</h4> 
+                    <h4 class="mr-1" id="product-price">${productsValue.price} SAR</h4> 
                </div>
                <h6 class="text-success">${productsValue.status}</h6>
                <div class="d-flex flex-column mt-4">
