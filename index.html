@@ -33,11 +33,11 @@
                
             </div>
 
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar"
                 aria-controls="Navbar" aria-expanded="false" aria-label="Toggle navigation" style="border:none;">
                 <i class="fas fa-ellipsis-v text-light"></i>
             </button>
-            <div class="collapse navbar-collapse" id="Navbar"></div> -->
+            <div class="collapse navbar-collapse" id="Navbar">
                 <form class="d-flex ms-auto my-3 my-lg-0">
                     <div class="input-group">
                         <input class="form-control" placeholder="Search" aria-label="Search" />
@@ -59,24 +59,13 @@
                         </ul>
                     </li>
                 </ul>
-            
+              </div> 
         </div>
     </nav>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-purple" id="sidebar-wrapper">
-            <div class="list-group my-3">
-                <a href="index.html" class="list-group-item  bg-transparent gray-text fw-bold active">
-                  <i class="fas fa-home"></i>Home</a>
-                <a href="products.html" class="list-group-item  bg-transparent gray-text fw-bold">
-                  <i class="fas fa-tshirt"></i>Products</a>
-                <a href="orders.html" class="list-group-item  bg-transparent gray-text fw-bold">
-                  <i class="fas fa-border-all"></i>Orders</a>
-                <a href="report.html" class="list-group-item  bg-transparent gray-text fw-bold">
-                  <i class="fas fa-chart-area"></i>Reports</a>
-                <a href="customers.html" class="list-group-item  bg-transparent  gray-text  fw-bold">
-                  <i class="fas fa-users"></i>Customers</a>
-            </div>
+          
         </div>
         <!-- /#sidebar-wrapper -->
 
@@ -236,25 +225,15 @@
               </div>
             </div>
        <!-- Customers Table -->
-       <footer class="footer mt-auto py-3 bg-light">
-        <div class="container-fluid">
-          <span class="text-muted"> Copyright © nrt.sa 2021</span>
-        </div>
-      </footer>
-
-            
+       <div id="footer"></div>   
         </div>
     </div>
     <!-- /#page-content-wrapper -->
     </div>
-    <!-- <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
+    
+    
 
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script> -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- for the chart -->
@@ -270,6 +249,7 @@
       src="//code.tidio.co/33kszi7d6glcpbsfrs8m3s6xpkh7oirp.js"
       async
     ></script>
+    
  
 </body>
 

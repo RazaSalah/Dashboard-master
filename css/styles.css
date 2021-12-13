@@ -9,6 +9,12 @@
   color: white!important;
 }
 
+.card-border{
+  border-color:#da4167!important;
+ 
+  border-width: 3px;
+}
+
 .gray-text {
   color: #bbbec5;
 }
@@ -31,6 +37,9 @@
 #sidebar-wrapper .list-group {
   width: 15rem;
 }
+#sidebar-wrapper div a i{
+  margin-right:10px;
+}
 
 #page-content-wrapper {
   min-width: 100vw;
@@ -46,19 +55,29 @@
 
 .list-group-item {
   border: none;
-  padding: 20px 30px;
+  padding: 10px 30px;
 }
 
 .list-group-item.active {
   background-color: transparent;
-  color: var(--main-text-color);
   font-weight: bold;
   border: none;
 }
+.sidebar-footer{
+ position: fixed; 
+ bottom: 0; 
+ padding-left: 20px;
+ 
+ 
+}
+
 .product-image {
   width: 100%
 }
 
+.dropdown ul li{
+  padding: 10px 30px;
+}
 
 @media (min-width: 768px) {
   #sidebar-wrapper {
